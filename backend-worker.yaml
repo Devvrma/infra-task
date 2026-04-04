@@ -25,8 +25,8 @@ spec:
     spec:
       containers:
       - name: backend
-        image: waygood-backend:latest  # Jo image tune build ki thi
-        imagePullPolicy: Never        # Minikube ko local image use karne ke liye bol raha hai
+        image: waygood-backend:latest  
+        imagePullPolicy: Never        
         ports:
         - containerPort: 5000
         env:
