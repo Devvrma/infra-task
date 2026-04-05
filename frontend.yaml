@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: devvrma/user-service:v2  
+        image: my-user-service:v2 
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5001
 ---
