@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: devverma99/waygood-frontend:latest
+        image: devverma99/waygood-frontend:v2
         imagePullPolicy: Always                       
         ports:
         - containerPort: 3000                        
