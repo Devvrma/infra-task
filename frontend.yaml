@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: waygood-frontend:v1
+  name: user-service-deployment 
 spec:
   replicas: 1
   selector:
@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: my-user-service:v2 
-        imagePullPolicy: IfNotPresent
+        image: devverma99/waygood-frontend-final:v1  
+        imagePullPolicy: Always                       
         ports:
-        - containerPort: 5001
+        - containerPort: 3000                        
 ---
 apiVersion: v1
 kind: Service
@@ -29,5 +29,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 5001
+      targetPort: 3000                          
   type: LoadBalancer
